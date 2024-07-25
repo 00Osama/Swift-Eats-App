@@ -210,12 +210,19 @@ class _HomePageState extends State<HomeScreen> {
               },
               child: const Padding(
                 padding: EdgeInsets.only(right: 245),
-                child: Text(
-                  'see more',
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Color.fromARGB(255, 239, 48, 41),
-                  ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 25),
+                      child: Text(
+                        'see more',
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Color.fromARGB(255, 239, 48, 41),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

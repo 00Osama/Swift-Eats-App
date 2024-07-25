@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -65,4 +62,14 @@ class DefaultFirebaseOptions {
     storageBucket: 'food-delivery-app-1b1e3.appspot.com',
     iosBundleId: 'com.example.fooddeliveryapp',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBGd54oKp24rPmSZHgUCUUbK7gitDgptEA',
+    appId: '1:34433345353:web:d7852c60c04fdf39f51c98',
+    messagingSenderId: '34433345353',
+    projectId: 'food-delivery-app-1b1e3',
+    authDomain: 'food-delivery-app-1b1e3.firebaseapp.com',
+    storageBucket: 'food-delivery-app-1b1e3.appspot.com',
+  );
+
 }

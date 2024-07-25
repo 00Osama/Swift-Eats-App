@@ -17,23 +17,19 @@ class _LoginItemState extends State<LoginItem> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 9,
-            offset: const Offset(0, 3),
-          ),
-        ],
-        gradient: const LinearGradient(
-          colors: [Color(0xffffffff), Color(0xffe5e5e5)],
-          end: Alignment.centerLeft,
-          begin: Alignment.centerRight,
-        ),
+        color: Color.fromARGB(255, 247, 246, 246),
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(50),
           bottomRight: Radius.circular(50),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 6,
+            blurRadius: 9,
+            offset: Offset(0, 3),
+          ),
+        ],
       ),
       child: SizedBox(
         height: 250,
@@ -45,7 +41,7 @@ class _LoginItemState extends State<LoginItem> {
               width: 200,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 GestureDetector(
                   onTap: () {
@@ -62,7 +58,6 @@ class _LoginItemState extends State<LoginItem> {
                     ),
                   ),
                 ),
-                const SizedBox(width: 100),
                 GestureDetector(
                   onTap: () {
                     Navigator.pushReplacement(

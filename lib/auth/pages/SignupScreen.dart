@@ -207,7 +207,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               }
             },
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 25),
         ],
       ),
     );
