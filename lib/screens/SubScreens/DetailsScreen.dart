@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/auth/services/error_message.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/ConfirmOrder.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -119,13 +118,22 @@ class _DetailsScreenState extends State<DetailsScreen> {
             ),
           );
         } else {
-          message(
-            context,
-            title: 'Order time is not currently allowed',
-            content: 'allowed time is between ${startTime} and ${endTime}',
-            buttonText: 'Ok',
-            onPressed: () {
-              Navigator.pop(context);
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: const Text('Order is not currently allowed'),
+                content:
+                    Text('Allowed time is between $startTime and $endTime'),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text('Ok'),
+                  ),
+                ],
+              );
             },
           );
         }

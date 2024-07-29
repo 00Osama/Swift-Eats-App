@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:fooddeliveryapp/CustomWidgets/CartItem.dart';
-import 'package:fooddeliveryapp/auth/services/error_message.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/ConfirmOrder.dart';
 
 class CartBuilder extends StatefulWidget {
@@ -124,15 +123,23 @@ class _CartBuilderState extends State<CartBuilder> {
                                     },
                                   );
                                 } else {
-                                  message(
-                                    context,
-                                    title:
-                                        'Order time is not currently allowed',
-                                    content:
-                                        'allowed time is between ${start} and ${end}',
-                                    buttonText: 'Ok',
-                                    onPressed: () {
-                                      Navigator.pop(context);
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      return AlertDialog(
+                                        title: Text(
+                                            'Order is not currently allowed'),
+                                        content: Text(
+                                            'Allowed time is between $start and $end'),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                            },
+                                            child: const Text('Ok'),
+                                          ),
+                                        ],
+                                      );
                                     },
                                   );
                                 }
