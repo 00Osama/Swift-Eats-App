@@ -35,7 +35,7 @@ class _LoginItemState extends State<LoginItem> {
         height: 250,
         child: Column(
           children: [
-            const SizedBox(height: 5),
+            const SizedBox(height: 1),
             Image.asset(
               'assets/images/startScreens/hat-removebg.png',
               width: 200,
