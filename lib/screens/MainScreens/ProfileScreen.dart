@@ -157,7 +157,7 @@ class ProFileScrren extends StatelessWidget {
             const SizedBox(height: 10),
             ProfileCategory(
               category: 'Account Info',
-              icon: const Icon(Icons.person_rounded),
+              icon: Icon(Icons.person_rounded, color: Colors.grey[100]),
               onTap: () {
                 Navigator.push(
                   context,
@@ -170,7 +170,7 @@ class ProFileScrren extends StatelessWidget {
             const SizedBox(height: 10),
             ProfileCategory(
               category: 'Settings',
-              icon: const Icon(Icons.settings_rounded),
+              icon: Icon(Icons.settings_rounded, color: Colors.grey[100]),
               onTap: () {
                 Navigator.push(
                   context,
@@ -186,7 +186,7 @@ class ProFileScrren extends StatelessWidget {
             accountType == 'admin'
                 ? ProfileCategory(
                     category: 'Manage Drivers',
-                    icon: const Icon(Icons.delivery_dining),
+                    icon: Icon(Icons.delivery_dining, color: Colors.grey[100]),
                     onTap: () {
                       Navigator.push(
                         context,

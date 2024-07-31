@@ -16,8 +16,8 @@ class ProfileCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-        shadowColor: MaterialStatePropertyAll(Colors.transparent),
+        backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+        shadowColor: WidgetStatePropertyAll(Colors.transparent),
       ),
       onPressed: onTap,
       child: Padding(
