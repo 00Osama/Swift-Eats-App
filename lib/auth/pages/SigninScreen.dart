@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/LoginItem.dart';
-import 'package:fooddeliveryapp/CustomWidgets/LoginRow.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyButton.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/LoginItem.dart';
+import 'package:fooddeliveryapp/Widgets/LoginRow.dart';
+import 'package:fooddeliveryapp/Widgets/MyButton.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/auth_gate.dart';
 import 'package:fooddeliveryapp/auth/services/auth_service.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';

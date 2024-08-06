@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyButton.dart';
+import 'package:fooddeliveryapp/Widgets/MyButton.dart';
 import 'package:fooddeliveryapp/auth/services/auth_gate.dart';
 import 'package:fooddeliveryapp/auth/services/auth_service.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';

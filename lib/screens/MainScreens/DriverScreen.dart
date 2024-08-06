@@ -1,10 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:delightful_toast/delight_toast.dart';
-import 'package:delightful_toast/toast/components/toast_card.dart';
-import 'package:delightful_toast/toast/utils/enums.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/OrderItem.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:fooddeliveryapp/Widgets/OrderItem.dart';
 import 'package:fooddeliveryapp/global_fields.dart';
 
 class DriverScreen extends StatefulWidget {
@@ -159,52 +157,28 @@ class _DriverScreenState extends State<DriverScreen> {
                                     .update({
                                   'orders': o,
                                 });
-                                DelightToastBar(
-                                  builder: (context) {
-                                    return ToastCard(
-                                      color: Color.fromARGB(255, 113, 201, 113),
-                                      leading: Icon(
-                                        Icons.notifications,
-                                        color: Colors.white,
-                                      ),
-                                      title: Text(
-                                        'order confirmed successfully',
-                                        style: TextStyle(
-                                          fontFamily: 'Ubuntu',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14,
-                                          color: Colors.grey.shade100,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                  position: DelightSnackbarPosition.top,
-                                  autoDismiss: true,
-                                ).show(context);
+                                Fluttertoast.showToast(
+                                  msg: "order confirmed successfully",
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.TOP,
+                                  timeInSecForIosWeb: 1,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 113, 201, 113),
+                                  textColor: Colors.white,
+                                  fontSize: 16.0,
+                                );
                                 code.clear();
                               } else {
-                                DelightToastBar(
-                                  builder: (context) {
-                                    return ToastCard(
-                                      color: Color.fromARGB(255, 230, 124, 116),
-                                      leading: Icon(
-                                        Icons.notifications,
-                                        color: Colors.white,
-                                      ),
-                                      title: Text(
-                                        'order security code is wrong',
-                                        style: TextStyle(
-                                          fontFamily: 'Ubuntu',
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14,
-                                          color: Colors.grey.shade100,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                  position: DelightSnackbarPosition.top,
-                                  autoDismiss: true,
-                                ).show(context);
+                                Fluttertoast.showToast(
+                                  msg: "order security code is wrong",
+                                  toastLength: Toast.LENGTH_SHORT,
+                                  gravity: ToastGravity.TOP,
+                                  timeInSecForIosWeb: 1,
+                                  backgroundColor:
+                                      Color.fromARGB(255, 230, 124, 116),
+                                  textColor: Colors.white,
+                                  fontSize: 16.0,
+                                );
                                 code.clear();
                               }
                             },

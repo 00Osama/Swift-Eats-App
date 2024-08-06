@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/Gnav.dart';
+import 'package:fooddeliveryapp/Widgets/Gnav.dart';
 import 'package:fooddeliveryapp/auth/services/auth_service.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/FoodBuilder.dart';
-import 'package:fooddeliveryapp/CustomWidgets/FoodCategory.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyDivider.dart';
+import 'package:fooddeliveryapp/Widgets/FoodBuilder.dart';
+import 'package:fooddeliveryapp/Widgets/FoodCategory.dart';
+import 'package:fooddeliveryapp/Widgets/MyDivider.dart';
 
 class SeeMore extends StatelessWidget {
   const SeeMore({super.key});

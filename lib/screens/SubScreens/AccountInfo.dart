@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/auth_service.dart';
 
 class AccountInfo extends StatefulWidget {
@@ -134,7 +134,7 @@ class _AccountInfoState extends State<AccountInfo> {
             ElevatedButton(
               style: const ButtonStyle(
                 backgroundColor:
-                    MaterialStatePropertyAll(Color.fromARGB(178, 244, 67, 54)),
+                    WidgetStatePropertyAll(Color.fromARGB(178, 244, 67, 54)),
               ),
               onPressed: () {
                 AuthService().signOut();

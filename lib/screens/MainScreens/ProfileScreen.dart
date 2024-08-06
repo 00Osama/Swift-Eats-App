@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/ProfileCategory.dart';
+import 'package:fooddeliveryapp/Widgets/ProfileCategory.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/AccountInfo.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/ManageDrivers.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/Settings.dart';

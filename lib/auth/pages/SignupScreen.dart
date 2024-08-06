@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
-import 'package:fooddeliveryapp/CustomWidgets/LoginItem.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyButton.dart';
-import 'package:fooddeliveryapp/CustomWidgets/SignupRow.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/LoginItem.dart';
+import 'package:fooddeliveryapp/Widgets/MyButton.dart';
+import 'package:fooddeliveryapp/Widgets/SignupRow.dart';
 import 'package:fooddeliveryapp/auth/services/auth_service.dart';
 import 'package:fooddeliveryapp/auth/pages/chooseProfilePhoto.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';

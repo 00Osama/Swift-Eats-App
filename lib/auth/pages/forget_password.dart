@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';
 
 class ForgetPasswordScreen extends StatefulWidget {
@@ -91,7 +91,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(
                     Color(0xff7271fd),
                   ),
                 ),
@@ -124,7 +124,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(
                     Color.fromARGB(255, 253, 113, 113),
                   ),
                 ),

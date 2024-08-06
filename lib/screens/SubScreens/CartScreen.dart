@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/CartBuilder.dart';
+import 'package:fooddeliveryapp/Widgets/CartBuilder.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});

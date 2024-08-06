@@ -1,6 +1,6 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/global_fields.dart';
 
 class OrderItem extends StatefulWidget {
@@ -238,7 +238,7 @@ class _OrderItemState extends State<OrderItem> {
                                   width: double.infinity,
                                   child: ElevatedButton(
                                     style: ButtonStyle(
-                                      backgroundColor: MaterialStatePropertyAll(
+                                      backgroundColor: WidgetStatePropertyAll(
                                         Colors.grey[800],
                                       ),
                                     ),

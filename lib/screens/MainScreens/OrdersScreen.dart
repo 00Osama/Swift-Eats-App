@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/OrderItem.dart';
+import 'package:fooddeliveryapp/Widgets/OrderItem.dart';
 
 class OrdersScreen extends StatefulWidget {
   const OrdersScreen({

@@ -89,8 +89,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
   Future<void> checkOrderTime() async {
     int currentHourTime = DateTime.now().hour;
-    print('currentHourTime');
-    print(currentHourTime);
 
     // Fetch the 'time' document from Firestore
     DocumentSnapshot timeDoc = await FirebaseFirestore.instance
@@ -262,11 +260,11 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       child: ElevatedButton(
                         onPressed: toggleCart,
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(
+                          backgroundColor: WidgetStateProperty.all<Color>(
                             const Color.fromARGB(255, 239, 48, 41),
                           ),
                           shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                              WidgetStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30.0),
                             ),
@@ -293,11 +291,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 await checkOrderTime();
                               },
                               style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all<Color>(
+                                backgroundColor: WidgetStateProperty.all<Color>(
                                   const Color.fromARGB(255, 239, 48, 41),
                                 ),
-                                shape: MaterialStateProperty.all<
+                                shape: WidgetStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(30.0),

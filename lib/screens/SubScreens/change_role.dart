@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';
 
 class ChangeRole extends StatefulWidget {
@@ -109,7 +109,7 @@ class _ChangeRoleState extends State<ChangeRole> {
               padding: const EdgeInsets.symmetric(horizontal: 130),
               child: ElevatedButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.grey[700]),
+                  backgroundColor: WidgetStateProperty.all(Colors.grey[700]),
                 ),
                 onPressed: () async {
                   if (email.text.isEmpty) {
@@ -367,7 +367,7 @@ class _ChangeRoleState extends State<ChangeRole> {
                             },
                             style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all(Colors.grey[700]),
+                                  WidgetStateProperty.all(Colors.grey[700]),
                             ),
                             child: Text(
                               'Save changes',

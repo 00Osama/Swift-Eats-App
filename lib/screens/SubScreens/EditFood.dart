@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -427,7 +427,7 @@ class _EditFoodState extends State<EditFood> {
               padding: const EdgeInsets.symmetric(horizontal: 95),
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(
                     Color.fromARGB(255, 82, 92, 65),
                   ),
                 ),
@@ -456,7 +456,7 @@ class _EditFoodState extends State<EditFood> {
               padding: const EdgeInsets.symmetric(horizontal: 60),
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(
                     Color.fromARGB(255, 79, 129, 96),
                   ),
                 ),
@@ -523,7 +523,7 @@ class _EditFoodState extends State<EditFood> {
               padding: const EdgeInsets.symmetric(horizontal: 60),
               child: ElevatedButton(
                 style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(
                     Color.fromARGB(255, 129, 79, 83),
                   ),
                 ),

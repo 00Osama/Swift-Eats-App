@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/FoodItem.dart';
+import 'package:fooddeliveryapp/Widgets/FoodItem.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/DetailsScreen.dart';
 
 // ignore: must_be_immutable

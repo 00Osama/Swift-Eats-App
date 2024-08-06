@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyButton.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyDivider.dart';
+import 'package:fooddeliveryapp/Widgets/MyButton.dart';
+import 'package:fooddeliveryapp/Widgets/MyDivider.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});

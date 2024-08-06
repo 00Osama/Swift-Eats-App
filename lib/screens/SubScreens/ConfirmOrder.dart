@@ -2,7 +2,7 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/CustomWidgets/MyTextfield.dart';
+import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';
 
 // ignore: must_be_immutable
@@ -221,10 +221,10 @@ class _ConfirmOrderState extends State<ConfirmOrder> {
                                 },
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all<Color>(
+                                      WidgetStateProperty.all<Color>(
                                     const Color.fromARGB(255, 239, 48, 41),
                                   ),
-                                  shape: MaterialStateProperty.all<
+                                  shape: WidgetStateProperty.all<
                                       RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(30.0),
@@ -301,10 +301,10 @@ class _ConfirmOrderState extends State<ConfirmOrder> {
                                 },
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all<Color>(
+                                      WidgetStateProperty.all<Color>(
                                     const Color.fromARGB(255, 45, 145, 25),
                                   ),
-                                  shape: MaterialStateProperty.all<
+                                  shape: WidgetStateProperty.all<
                                       RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(30.0),
@@ -312,7 +312,7 @@ class _ConfirmOrderState extends State<ConfirmOrder> {
                                   ),
                                 ),
                                 child: const Text(
-                                  'complete order',
+                                  'order now',
                                   style: TextStyle(
                                     color: Color.fromARGB(255, 255, 255, 255),
                                   ),
