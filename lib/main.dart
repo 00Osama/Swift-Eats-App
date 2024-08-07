@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fooddeliveryapp/auth/services/auth_gate.dart';
 import 'package:fooddeliveryapp/firebase_options.dart';
-import 'package:fooddeliveryapp/screens/MainScreens/ProfileScreen.dart';
-import 'package:shimmer/shimmer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
