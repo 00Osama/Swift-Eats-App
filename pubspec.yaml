@@ -52,6 +52,8 @@ dependencies:
   dio: ^5.5.0+1
   bloc: ^8.1.4
   fluttertoast: ^8.2.6
+  fancy_shimmer_image: ^2.0.3
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1

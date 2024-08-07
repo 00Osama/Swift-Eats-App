@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddeliveryapp/Widgets/ProfileCategory.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/AccountInfo.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/ManageDrivers.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/Settings.dart';
+import 'package:shimmer/shimmer.dart';
 
 class ProFileScrren extends StatelessWidget {
   const ProFileScrren({
@@ -44,10 +46,62 @@ class ProFileScrren extends StatelessWidget {
                   .get(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(
-                      child: CircularProgressIndicator(
-                    color: Colors.grey[700],
-                  ));
+                  return Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 20),
+                        Shimmer.fromColors(
+                          baseColor: Colors.grey[300]!,
+                          highlightColor: Colors.grey[100]!,
+                          child: CircleAvatar(
+                            radius: 50,
+                            backgroundColor: Colors.grey[300],
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Shimmer.fromColors(
+                          baseColor: Colors.grey[300]!,
+                          highlightColor: Colors.grey[100]!,
+                          child: Container(
+                            height: 20,
+                            width: 150,
+                            color: Colors.grey[300],
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        Shimmer.fromColors(
+                          baseColor: Colors.grey[300]!,
+                          highlightColor: Colors.grey[100]!,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  height: 40,
+                                  width: 40,
+                                  color: Colors.grey[300],
+                                ),
+                                SizedBox(width: 16),
+                                Expanded(
+                                  child: Container(
+                                    height: 20,
+                                    color: Colors.grey[300],
+                                  ),
+                                ),
+                                SizedBox(width: 16),
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: Colors.grey[300],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
                 } else if (snapshot.hasError) {
                   return Center(
                     child: Text('Error: ${snapshot.error}'),
@@ -62,9 +116,11 @@ class ProFileScrren extends StatelessWidget {
                       height: 150,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10000),
-                        child: Image.network(
-                          userData['profileImage'],
-                          fit: BoxFit.cover,
+                        child: FancyShimmerImage(
+                          imageUrl: userData['profileImage'],
+                          shimmerBaseColor: Colors.grey[400],
+                          shimmerHighlightColor: Colors.white,
+                          boxFit: BoxFit.cover,
                         ),
                       ),
                     ),

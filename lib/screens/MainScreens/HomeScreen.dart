@@ -54,7 +54,7 @@ class _HomePageState extends State<HomeScreen> {
                 )
               ],
             ),
-            const SizedBox(height: 100),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.11),
             Container(
               padding: const EdgeInsets.only(left: 20),
               width: double.infinity,
