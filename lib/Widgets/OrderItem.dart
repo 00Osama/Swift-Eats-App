@@ -1,4 +1,5 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/global_fields.dart';
@@ -82,9 +83,11 @@ class _OrderItemState extends State<OrderItem> {
                       width: 75,
                       height: 75,
                       child: ClipOval(
-                        child: Image.network(
-                          widget.image,
-                          fit: BoxFit.cover,
+                        child: FancyShimmerImage(
+                          imageUrl: widget.image,
+                          shimmerBaseColor: Colors.grey[300],
+                          shimmerHighlightColor: Colors.white,
+                          boxFit: BoxFit.cover,
                         ),
                       ),
                     ),
