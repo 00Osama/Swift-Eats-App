@@ -1,3 +1,4 @@
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/DetailsScreen.dart';
@@ -147,9 +148,11 @@ class Search extends SearchDelegate {
                               width: 85,
                               height: 85,
                               child: ClipOval(
-                                child: Image.network(
-                                  food['foodImage'],
-                                  fit: BoxFit.cover,
+                                child: FancyShimmerImage(
+                                  imageUrl: food['foodImage'],
+                                  shimmerBaseColor: Colors.grey[300],
+                                  shimmerHighlightColor: Colors.white,
+                                  boxFit: BoxFit.cover,
                                 ),
                               ),
                             ),

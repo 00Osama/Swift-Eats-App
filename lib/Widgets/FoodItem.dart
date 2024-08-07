@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddeliveryapp/auth/services/error_message.dart';
 import 'package:fooddeliveryapp/screens/SubScreens/EditFood.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 
 class FoodItem extends StatefulWidget {
   const FoodItem({
@@ -61,7 +62,7 @@ class _FoodItemState extends State<FoodItem> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 13),
+            const SizedBox(height: 15),
             Container(
               width: widget.imageSize,
               height: widget.imageSize,
@@ -77,9 +78,10 @@ class _FoodItemState extends State<FoodItem> {
                 ],
               ),
               child: ClipOval(
-                child: Image.network(
-                  widget.food!['foodImage'],
-                  fit: BoxFit.cover,
+                child: FancyShimmerImage(
+                  imageUrl: widget.food!['foodImage'],
+                  shimmerBaseColor: Colors.grey[300],
+                  shimmerHighlightColor: Colors.white,
                 ),
               ),
             ),

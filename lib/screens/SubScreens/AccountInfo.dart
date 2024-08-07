@@ -1,8 +1,10 @@
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fooddeliveryapp/Widgets/MyTextfield.dart';
 import 'package:fooddeliveryapp/auth/services/auth_service.dart';
+import 'package:shimmer/shimmer.dart';
 
 class AccountInfo extends StatefulWidget {
   const AccountInfo({Key? key}) : super(key: key);
@@ -56,10 +58,47 @@ class _AccountInfoState extends State<AccountInfo> {
                   .get(),
               builder: (context, AsyncSnapshot<DocumentSnapshot> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(
-                    child: CircularProgressIndicator(
-                      color: Colors.grey[700],
-                    ),
+                  return Column(
+                    children: [
+                      Shimmer.fromColors(
+                        baseColor: Colors.grey[400]!,
+                        highlightColor: Colors.white,
+                        child: CircleAvatar(
+                          radius: 60,
+                          backgroundColor: Colors.grey[300],
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      Shimmer.fromColors(
+                        baseColor: Colors.grey[400]!,
+                        highlightColor: Colors.white,
+                        child: Container(
+                          height: 20,
+                          width: 150,
+                          color: Colors.grey[300],
+                        ),
+                      ),
+                      const SizedBox(height: 60),
+                      Shimmer.fromColors(
+                        baseColor: Colors.grey[400]!,
+                        highlightColor: Colors.white,
+                        child: Container(
+                          height: 20,
+                          width: 150,
+                          color: Colors.grey[300],
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Shimmer.fromColors(
+                        baseColor: Colors.grey[400]!,
+                        highlightColor: Colors.white,
+                        child: Container(
+                          height: 20,
+                          width: 150,
+                          color: Colors.grey[300],
+                        ),
+                      ),
+                    ],
                   );
                 } else if (snapshot.hasError) {
                   return Center(
@@ -84,9 +123,11 @@ class _AccountInfoState extends State<AccountInfo> {
                       height: 150,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(75),
-                        child: Image.network(
-                          userData['profileImage'],
-                          fit: BoxFit.cover,
+                        child: FancyShimmerImage(
+                          imageUrl: userData['profileImage'],
+                          shimmerBaseColor: Colors.grey[300],
+                          shimmerHighlightColor: Colors.white,
+                          boxFit: BoxFit.cover,
                         ),
                       ),
                     ),

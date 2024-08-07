@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -43,9 +44,11 @@ class _CartItemState extends State<CartItem> {
                 width: 75,
                 height: 75,
                 child: ClipOval(
-                  child: Image.network(
-                    widget.item['image'],
-                    fit: BoxFit.cover,
+                  child: FancyShimmerImage(
+                    imageUrl: widget.item['image'],
+                    shimmerBaseColor: Colors.grey[300],
+                    shimmerHighlightColor: Colors.white,
+                    boxFit: BoxFit.cover,
                   ),
                 ),
               ),
