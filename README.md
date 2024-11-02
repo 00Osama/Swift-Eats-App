@@ -1,4 +1,4 @@
-## HINT
+## Brief
 admin (first registered account) can change account type from user to driver
 
 ## OUTPUT
