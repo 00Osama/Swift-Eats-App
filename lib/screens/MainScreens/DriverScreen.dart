@@ -50,8 +50,8 @@ class _DriverScreenState extends State<DriverScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
+        backgroundColor: Colors.grey[300],
+        surfaceTintColor: Colors.grey[300],
         title: const Center(
           child: Text(
             'Driver Screen',

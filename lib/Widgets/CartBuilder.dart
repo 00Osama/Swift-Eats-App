@@ -91,14 +91,16 @@ class _CartBuilderState extends State<CartBuilder> {
                     children: [
                       SlidableAction(
                         onPressed: (context) async {
-                          setState(() {
-                            FirebaseFirestore.instance
-                                .collection('users')
-                                .doc(FirebaseAuth.instance.currentUser!.email)
-                                .collection('cart')
-                                .doc(cartItem.id)
-                                .delete();
-                          });
+                          setState(
+                            () {
+                              FirebaseFirestore.instance
+                                  .collection('users')
+                                  .doc(FirebaseAuth.instance.currentUser!.email)
+                                  .collection('cart')
+                                  .doc(cartItem.id)
+                                  .delete();
+                            },
+                          );
                         },
                         backgroundColor: const Color.fromARGB(166, 219, 13, 13),
                         icon: Icons.delete_rounded,

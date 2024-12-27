@@ -20,8 +20,8 @@ class _AdminScreenState extends State<AdminScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        shadowColor: Colors.transparent,
+        backgroundColor: Colors.grey[300],
+        surfaceTintColor: Colors.grey[300],
         title: const Center(
           child: Text(
             'Admin Screen',
